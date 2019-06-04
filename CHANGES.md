@@ -5,6 +5,16 @@ New languages:
 New styles:
 
 Improvements:
+- Issue #1930 - fix markup for escaped quotes in Bash
+
+## Version 9.15.8
+
+New languages:
+  none.
+New styles:
+  none.
+Improvements:
+  - fix(bash): revert escaped double quotes - broke Firefox/Safari.
 
 ## Version 9.15.7
 New languages:

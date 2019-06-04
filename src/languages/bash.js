@@ -15,7 +15,7 @@ function(hljs) {
   };
   var QUOTE_STRING = {
     className: 'string',
-    begin: /(?<!\\)"/, end: /(?<!\\)"/,
+    begin: /"/, end: /"/,
     contains: [
       hljs.BACKSLASH_ESCAPE,
       VAR,
@@ -25,6 +25,11 @@ function(hljs) {
         contains: [hljs.BACKSLASH_ESCAPE]
       }
     ]
+  };
+  var ESCAPED_QUOTE = {
+    className: '',
+    begin: /\\"/
+
   };
   var APOS_STRING = {
     className: 'string',
@@ -74,6 +79,7 @@ function(hljs) {
       },
       hljs.HASH_COMMENT_MODE,
       QUOTE_STRING,
+      ESCAPED_QUOTE,
       APOS_STRING,
       VAR
     ]
